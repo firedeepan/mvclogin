@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "AfterLogin";
+}
+
+<div style="text-align:center">
+    <h2>Welcome</h2>
+    @if (Session["LogedUsername"] != null)
+    {
+        <text>
+            Welcome @Session["LogedUsername"].ToString()
+        </text>
+        <br />
+        <input type="button" value="Logout" onclick="location.href='@Url.Action("Logout", "Page")'" />
+    }
+</div>
